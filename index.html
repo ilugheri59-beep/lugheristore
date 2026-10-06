@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LUGHERI STORE — moda, estilo e acessórios para você.">
+  <title>LUGHERI STORE | Moda e acessórios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#inicio">LUGHERI <span>STORE</span></a>
+  <button class="menu-btn" aria-label="Abrir menu">☰</button>
+  <nav class="nav">
+    <a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#destaques">Destaques</a>
+    <a href="#categorias">Roupas</a><a href="#categorias">Acessórios</a><a href="#contato">Contato</a>
+  </nav>
+  <div class="actions">
+    <button id="searchBtn" aria-label="Pesquisar">⌕</button>
+    <button id="cartBtn" aria-label="Carrinho">🛒 <b id="cartCount">0</b></button>
+    <a class="instagram" href="https://instagram.com/lugheristore_01" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div>
+    <p class="eyebrow">LUGHERI STORE</p>
+    <h1>Moda, estilo e<br><span>acessórios</span> para você.</h1>
+    <p class="hero-text">Escolha seus produtos, monte seu carrinho e finalize seu pedido pelo WhatsApp.</p>
+    <a class="gold-btn" href="#produtos">VER PRODUTOS</a>
+  </div>
+</section>
+
+<section id="produtos" class="section">
+  <div class="section-head"><div><p class="eyebrow">CATÁLOGO</p><h2>Nossos Produtos</h2></div><input id="searchInput" class="search" placeholder="Pesquisar produto..."></div>
+  <div id="categories" class="chips"></div>
+  <div id="productGrid" class="grid"></div>
+</section>
+
+<section id="destaques" class="section dark">
+  <div class="section-head"><div><p class="eyebrow">SELEÇÃO DA LOJA</p><h2>Produtos em Destaque</h2></div></div>
+  <div id="featuredGrid" class="grid"></div>
+</section>
+
+<section id="categorias" class="section">
+  <div class="section-head"><div><p class="eyebrow">CATEGORIAS</p><h2>Encontre seu estilo</h2></div></div>
+  <div class="category-grid">
+    <button data-cat="Roupas">Roupas</button><button data-cat="Camisas">Camisas</button>
+    <button data-cat="Bermudas">Bermudas</button><button data-cat="Acessórios">Acessórios</button>
+    <button data-cat="Perfumes">Perfumes</button><button data-cat="Correntes">Correntes</button>
+    <button data-cat="Outros">Outros</button>
+  </div>
+</section>
+
+<section class="instagram-section">
+  <p class="eyebrow">ACOMPANHE A LOJA</p><h2>@lugheristore_01</h2>
+  <p>Siga a LUGHERI STORE no Instagram.</p>
+  <a class="gold-btn" href="https://instagram.com/lugheristore_01" target="_blank" rel="noopener">SEGUIR NO INSTAGRAM</a>
+</section>
+
+<section id="contato" class="section contact">
+  <p class="eyebrow">FALE CONOSCO</p><h2>Contato</h2>
+  <div class="contact-grid">
+    <a href="https://wa.me/5511926348023" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>(11) 92634-8023</span></a>
+    <a href="https://instagram.com/lugheristore_01" target="_blank" rel="noopener"><strong>Instagram</strong><span>@lugheristore_01</span></a>
+    <div><strong>Horário de atendimento</strong><span>Informe o horário da loja</span></div>
+  </div>
+</section>
+</main>
+
+<footer><div><strong>LUGHERI STORE</strong><p>Moda, estilo e acessórios.</p></div><div class="footer-links"><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#destaques">Destaques</a><a href="#contato">Contato</a><a href="https://instagram.com/lugheristore_01" target="_blank">Instagram</a><a href="https://wa.me/5511926348023" target="_blank">WhatsApp</a></div></footer>
+
+<aside id="cart" class="drawer" aria-hidden="true">
+  <div class="drawer-head"><h2>Seu carrinho</h2><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+  <button id="checkoutBtn" class="gold-btn full">FINALIZAR PELO WHATSAPP</button>
+</aside>
+<div id="overlay" class="overlay"></div>
+
+<div id="checkout" class="modal" aria-hidden="true">
+ <div class="modal-card">
+  <button class="modal-close" id="closeCheckout">×</button>
+  <p class="eyebrow">FINALIZAÇÃO</p><h2>Dados do pedido</h2>
+  <form id="checkoutForm">
+   <input id="name" required placeholder="Nome">
+   <input id="phone" required placeholder="Telefone">
+   <input id="address" required placeholder="Endereço">
+   <select id="payment" required><option value="">Forma de pagamento</option><option>Pix</option><option>Cartão</option><option>Dinheiro</option><option>Outro</option></select>
+   <button class="gold-btn full" type="submit">ENVIAR PEDIDO NO WHATSAPP</button>
+  </form>
+ </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
